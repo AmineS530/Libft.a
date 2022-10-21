@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 10:14:05 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/09 13:47:04 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/21 13:06:16 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ char	*ft_strrchr(const char *s, int c)
 
 	awa = ((char *) s);
 	len = ft_strlen(s);
-	while ((int)len >= 0)
+	while ((int)len > 0)
 	{
-		if (awa[len] == c)
+		if (awa[len] == ((char)c))
 		{
 			return (&awa[len]);
 		}
 		len--;
 	}
-	if (awa[len] == c)
+	if (awa[len] == ((char)c))
 	{
 		return (&awa[len]);
 	}
-	return (0);
+	return (NULL);
 }

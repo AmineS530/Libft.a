@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:51:27 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/13 10:16:54 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/17 12:54:28 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	owo = 0;
 	slen = ft_strlen(src);
 	if (!size)
-	{
-		return (0);
-	}
-	while (owo < size - 1)
+		return (slen);
+	while (src[owo] && owo < size - 1)
 	{
 		dest[owo] = src[owo];
 		owo++;

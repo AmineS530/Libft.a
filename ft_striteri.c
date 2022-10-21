@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 21:21:49 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/17 18:40:31 by asadik           ###   ########.fr       */
+/*   Created: 2022/10/18 11:09:34 by asadik            #+#    #+#             */
+/*   Updated: 2022/10/18 11:32:24 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int		i;
-	char	*uwu;
-	char	owo;
+	int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	owo = ((char)c);
-	uwu = ((char *)s);
-	while (uwu[i] != owo && uwu[i] != '\0')
+	while (s[i])
 	{
-		if (uwu[i] == owo)
-		{
-			return (&uwu[i]);
-		}
+		f(i, &s[i]);
 		i++;
 	}
-	if (uwu[i] == owo)
-	{
-		return (&uwu[i]);
-	}
-	return (0);
 }

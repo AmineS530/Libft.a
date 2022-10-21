@@ -6,20 +6,20 @@
 /*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:31:20 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/16 16:00:36 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/20 17:06:52 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_revtab2(char *str)
+static char	*ft_revtab(char *str, int negative)
 {
 	int	array_e;
 	int	array_b;
 	int	tmp;
 
 	array_e = (ft_strlen(str) - 1);
-	array_b = 1;
+	array_b = negative;
 	tmp = 0;
 	while (array_b < array_e)
 	{
@@ -32,48 +32,59 @@ static char	*ft_revtab2(char *str)
 	return (str);
 }
 
-static int	ft_nbr_len(int nb)
+static int	ft_nbr_len(long nb)
 {
-	int	owo;
+	long	uwu;
+	int		owo;
 
+	uwu = ((long)nb);
 	owo = 0;
-	if (nb < 0)
+	if (uwu == 0)
+		return (1);
+	if (uwu < 0)
 	{
 		owo++;
-		nb *= -1;
+		uwu *= -1;
 	}
-	while (nb)
+	while (uwu)
 	{
-		nb /= 10;
+		uwu /= 10;
 		owo++;
 	}
 	return (owo);
+}
+
+static	void	yaleghderbda(long nb, char *results, int uwu)
+{
+	while (nb > 0)
+	{
+		*(results + uwu++) = ((nb % 10) + '0');
+		nb /= 10;
+	}
+	*(results + uwu) = '\0';
 }
 
 char	*ft_itoa(int n)
 {
 	int		uwu;
 	char	*results;
-	int		len;
+	int		neg;
+	long	nb;
 
-	if (n == 0)
-		return ("0");
-	len = ft_nbr_len(n);
-	results = malloc (sizeof(char) * len +1);
+	nb = ((long)n);
+	neg = 0;
+	results = malloc(sizeof(char) * ft_nbr_len(nb) + 1);
 	if (!results)
 		return (NULL);
 	uwu = 0;
-	if (n < 0)
+	if (nb == 0)
+		*(results + uwu++) = '0';
+	if (nb < 0)
 	{
-		n *= -1;
+		nb *= -1;
 		*(results + uwu++) = '-';
+		neg = 1;
 	}
-	while (n > 0)
-	{
-		*(results + uwu++) = ((n % 10) + '0');
-		n = n / 10;
-	}
-	ft_revtab2(results);
-	*(results + uwu) = '\0';
-	return (results);
+	yaleghderbda(nb, results, uwu);
+	return (ft_revtab(results, neg));
 }

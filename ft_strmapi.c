@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 21:21:49 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/17 18:40:31 by asadik           ###   ########.fr       */
+/*   Created: 2022/10/18 11:34:03 by asadik            #+#    #+#             */
+/*   Updated: 2022/10/20 15:45:42 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
-	char	*uwu;
-	char	owo;
+	char	*mal;
+	char	*awa;
 
 	i = 0;
-	owo = ((char)c);
-	uwu = ((char *)s);
-	while (uwu[i] != owo && uwu[i] != '\0')
+	if (!s || !f)
+		return (NULL);
+	awa = ((char *)s);
+	mal = malloc(sizeof(char) * ft_strlen(awa) + 1);
+	if (!mal)
+		return (NULL);
+	while (s[i])
 	{
-		if (uwu[i] == owo)
-		{
-			return (&uwu[i]);
-		}
+		*(mal + i) = f(i, awa[i]);
 		i++;
 	}
-	if (uwu[i] == owo)
-	{
-		return (&uwu[i]);
-	}
-	return (0);
+	*(mal + i) = '\0';
+	return (mal);
 }

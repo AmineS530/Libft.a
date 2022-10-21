@@ -3,14 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: asadik <asadik@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:53:43 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/13 10:08:19 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:14:44 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strtrim(char const *s1, char const *set)
+#include "libft.h"
+
+static int	is_valid(const char *set, char c)
 {
-	
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+static size_t	lenif(const char *s1)
+{
+	if (ft_strlen(s1) > 0)
+		return (ft_strlen(s1) - 1);
+	else
+		return (ft_strlen(s1));
+}
+
+char	*ft_strtrim(const char *s1, char const *set)
+{
+	size_t	i;
+	size_t	len;
+	char	*owo;
+
+	i = 0;
+	len = 0;
+	if (!s1)
+		return (NULL);
+	while (is_valid(set, *(s1)))
+		s1++;
+	len = lenif(s1);
+	while (is_valid(set, s1[len]))
+		len--;
+	owo = malloc(sizeof(char) * len + 2);
+	if (!owo)
+		return (NULL);
+	while (i < len + 1)
+	{
+		owo[i] = s1[i];
+		i++;
+	}
+	owo[i] = '\0';
+	return (owo);
 }
