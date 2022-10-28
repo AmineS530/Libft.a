@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 00:10:10 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/24 18:45:20 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/26 14:52:28 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ static void	put_word(char const *s, char **tab, int wordpos, char c)
 			}
 			pog--;
 		}
+		free (tab);
+		tab = NULL;
 	}
 	j = 0;
 	while (s[j] && s[j] != c)
@@ -104,7 +106,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	pog = word_count(s, c);
-	tab = (char **)malloc(sizeof(char *) * pog + 1);
+	tab = (char **)malloc(sizeof(char *) * (pog + 1));
 	if (!tab)
 		return (NULL);
 	tab[pog] = NULL;

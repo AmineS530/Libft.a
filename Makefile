@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -c
 
@@ -40,26 +40,41 @@ PT2 = ft_putchar_fd.c \
 		ft_strmapi.c \
 		ft_split.c \
 
+BOUNUSPT = ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
+
 CFILES = $(PT1) $(PT2)
 
 AR = ar rcs
 
 OBJECTS = $(CFILES:.c=.o)
 
+BOUNUS_OBJ = $(BOUNUSPT:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJECTS) libft.h
 	$(AR) $@ $^
 
-bonus :
+bonus : $(BOUNUS_OBJ) libft.h
+	$(AR) $(NAME) $^
 
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) $< -o $@
 
 clean :
-	rm -rf $(OBJECTS) $(bonus_obj)
+	rm -rf $(OBJECTS) $(BOUNUS_OBJ)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
+.PHONY: clean fclean all re bonus

@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:31:20 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/22 00:11:41 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/27 15:40:53 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	ft_nbr_len(long nb)
 	long	uwu;
 	int		owo;
 
-	uwu = ((long)nb);
+	uwu = nb;
 	owo = 0;
 	if (uwu == 0)
 		return (1);

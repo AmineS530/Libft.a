@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 12:23:00 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/21 22:37:13 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/26 18:29:00 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static char	*ft_getresults(const char *haystack, const char *needle, size_t len,
 	{
 		while (haystack[i + j] == needle[j] && i + j < len)
 		{
-			if (!needle[j + 1])
+			if (needle[j + 1] == '\0')
 			{
 				return ((char *)(haystack + i));
 			}
@@ -44,7 +44,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (needle[0] == '\0')
 		return (((char *)haystack));
 	nlen = ft_strlen(needle);
-	while (*haystack && i < len)
+	while (haystack[i] && i < len)
 	{
 		uwu = ft_getresults(haystack, needle, len, i);
 		if (uwu != NULL)

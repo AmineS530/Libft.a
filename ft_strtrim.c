@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 09:53:43 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/22 00:10:56 by asadik           ###   ########.fr       */
+/*   Updated: 2022/10/27 14:58:37 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static int	is_valid(const char *set, char c)
 {
 	int	i;
 
+	if (!set)
+		return (0);
 	i = 0;
 	while (set[i])
 	{
