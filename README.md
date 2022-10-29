@@ -6,7 +6,7 @@
 # What will you find here exactly?
 	This project consist of 43 functions and their header file and finally the Makefile.
 	
-# What are theses functions and what their use?
+# What are these functions and what's their use?
 	//to do
 
 
