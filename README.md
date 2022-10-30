@@ -42,9 +42,9 @@
  14. [ft_tolower](https://github.com/AmineS530/Libft.a/blob/main/ft_tolower.c)
 	 > Converts the character to lowercase.
  15. [ft_strchr](https://github.com/AmineS530/Libft.a/blob/main/ft_strchr.c)
-	 > locates the first occurrence of a character in a string.
+	 > locates the first occurrence of a character in a string and returns it address.
  16. [ft_strrchr](https://github.com/AmineS530/Libft.a/blob/main/ft_strrchr.c)
-	 > // to do 
+	 > locates the last occurrence of a character in a string and returns it address.
  17. [ft_strncmp](https://github.com/AmineS530/Libft.a/blob/main/ft_strncmp.c)
 	 > // to do 
  18. [ft_memchr](https://github.com/AmineS530/Libft.a/blob/main/ft_memchr.c)
@@ -62,47 +62,47 @@
 
 ## ***Part 2:  Additional functions***.
 
- 1. ft_substr
+ - [ft_substr](https://github.com/AmineS530/Libft.a/blob/main/ft_substr.c)
 	> // to do 
- 2.  ft_strjoin
+ -  [ft_strjoin](https://github.com/AmineS530/Libft.a/blob/main/ft_strjoin.c)
 		> // to do 
- 3. ft_strtrim
+ - [ft_strtrim](https://github.com/AmineS530/Libft.a/blob/main/ft_strtrim.c)
 	> // to do 
- 4. ft_split
+ - [ft_split](https://github.com/AmineS530/Libft.a/blob/main/ft_split.c)
 	> // to do 
- 5. ft_itoa
+ - [ft_itoa](https://github.com/AmineS530/Libft.a/blob/main/ft_itoa.c)
 	> // to do 
- 6. ft_strmapi
+ - [ft_strmapi](https://github.com/AmineS530/Libft.a/blob/main/ft_strmapi.c)
 	> // to do 
- 7. ft_striteri
+ - [ft_striteri](https://github.com/AmineS530/Libft.a/blob/main/ft_striteri.c)
 	> // to do 
- 8. ft_putchar_fd
+ - [ft_putchar_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putchar_fd.c)
 	> // to do 
- 9. ft_putstr_fd
+ - [ft_putstr_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putstr_fd.c)
 	> // to do 
- 10. ft_putendl_fd
+ - [ft_putendl_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putendl_fd.)
 		> // to do 
- 11. ft_putnbr_fd
+ - [ft_putnbr_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putnbr_fd.)
 		> // to do 
 ## ***Bonus Part***.
 
- 1. ft_lstnew 
+ - [ft_lstnew](https://github.com/AmineS530/Libft.a/blob/main/ft_lstnew_bonus.c) 
 	> // to do 
- 2. ft_lstadd_front 
+ - [ft_lstadd_front](https://github.com/AmineS530/Libft.a/blob/main/ft_lstadd_front_bonus.c) 
 	> // to do 
- 3. ft_lstsize 
+ - [ft_lstsize](https://github.com/AmineS530/Libft.a/blob/main/ft_lstsize_bonus.c) 
 	> // to do 
- 4. ft_lstlast 
+ - [ft_lstlast](https://github.com/AmineS530/Libft.a/blob/main/ft_lstlast_bonus.c) 
 	> // to do 
- 5. ft_lstadd_back
+ - [ft_lstadd_back](https://github.com/AmineS530/Libft.a/blob/main/ft_lstadd_back_bonus.c)
 	> // to do 
- 6. ft_lstdelone 
+ - [ft_lstdelone](https://github.com/AmineS530/Libft.a/blob/main/ft_lstdelone_bonus.c) 
 	> // to do 
- 7. ft_lstclear 
+ - [ft_lstclear](https://github.com/AmineS530/Libft.a/blob/main/ft_lstclear_bonus.c) 
 	> // to do 
- 8. ft_lstiter 
+ - [ft_lstiter](https://github.com/AmineS530/Libft.a/blob/main/ft_lstiter_bonus.c) 
 	> // to do 
- 9. ft_lstmap
+ - [ft_lstmap](https://github.com/AmineS530/Libft.a/blob/main/ft_lstmap_bonus.c)
 	> // to do 
 # Other:
 
@@ -111,3 +111,7 @@
 		If you gone through some of my code you'll notice weird variable naming such as ("uwu","owo","awa"...),
 		the reason behind that , is id like to have fun making my code, so I use these names so when I code I don't feel tired/bored easily :),
 		(To conclude. It's a something that increases my productivity).
+
+ - Inconsistent code optimizations 
+			you may  have noticed that for example use unnecessary if statement or perhaps a while loop, (I noticed some of these mistakes after i finished the project,  well the reason behind it is simply i didn't know better at the time i wrote the code, But hey, its getting the job done
+
