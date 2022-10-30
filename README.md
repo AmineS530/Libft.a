@@ -80,9 +80,9 @@
 	> // to do 
  - [ft_putstr_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putstr_fd.c)
 	> // to do 
- - [ft_putendl_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putendl_fd.)
+ - [ft_putendl_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putendl_fd.c)
 		> // to do 
- - [ft_putnbr_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putnbr_fd.)
+ - [ft_putnbr_fd](https://github.com/AmineS530/Libft.a/blob/main/ft_putnbr_fd.c)
 		> // to do 
 ## ***Bonus Part***.
 
