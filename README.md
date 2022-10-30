@@ -113,7 +113,7 @@
 		(To conclude. It's a something that increases my productivity).
 
  - Inconsistent code optimizations 
- 		you may have noticed that for example use unnecessary if statement or perhaps a while loop,
+ 		`you may have noticed that for example use unnecessary if statement or perhaps a while loop,
 		(I noticed some of these mistakes after i finished the project,  well the reason behind it is simply i didn't know better at the time 
-		i wrote the code, But hey, its getting the job done
+		i wrote the code, But hey, its getting the job done`
 
