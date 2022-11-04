@@ -125,8 +125,9 @@ Finally, the pointer to the list must be set to NULL.
 
 # Other:
  - Some resources i needed through the project:
-	[Makefile GNU MAN](https://www.gnu.org/software/make/manual/make.html#Simple-Makefile)
-	[MacOS MAN](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/)
+ 
+	[Makefile GNU MAN](https://www.gnu.org/software/make/manual/make.html#Simple-Makefile).
+	[MacOS MAN](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/).
 	https://stackoverflow.com/questions/451375/what-does-it-mean-for-a-char-to-be-signed
 	https://stackoverflow.com/questions/9834067/difference-between-char-and-const-char 
 	[Linked lists](https://www.youtube.com/watch?v=uBZHMkpsTfg&list=PLfqABt5AS4FmXeWuuNDS3XGENJO1VYGxl)
