@@ -122,7 +122,8 @@ Finally, the pointer to the list must be set to NULL.
  - **[Tripouille's tester](https://github.com/Tripouille/libftTester)**.
  - **[Francinette](https://github.com/xicodomingues/francinette)**.
  - **[Libft unit test](https://github.com/alelievr/libft-unit-test)**.
-
+ - **[Libft War-machine](https://github.com/0x050f/libft-war-machine)**.
+- 
 # Other:
  - Some resources i needed through the project:
  
