@@ -123,7 +123,7 @@ Finally, the pointer to the list must be set to NULL.
  - **[Francinette](https://github.com/xicodomingues/francinette)**.
  - **[Libft unit test](https://github.com/alelievr/libft-unit-test)**.
  - **[Libft War-machine](https://github.com/0x050f/libft-war-machine)**.
-- 
+ 
 # Other:
  - Some resources i needed through the project:
  
